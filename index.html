@@ -447,10 +447,10 @@
               <use  class="icon-user-modal" href="./images/icons.svg#icon-email-modal" width="18px" height="18px"></use>
             </svg>
           </label>
-          <label>
+          <label class="comment-title" for="comment">
             Коментар
-            <textarea style="resize:none" name="comment" class="modal-input modal-comment" placeholder="Введіть текст"></textarea>
           </label>
+            <textarea class="modal-comment modal-input" name="comment" id="comment" placeholder="Введіть текст" ></textarea>
           <label class="modal-send" for="mail-send">
             <div class="modal-check">
             <input class="check-box" type="checkbox"  name="mail-send" id="mail-send" />
@@ -463,9 +463,10 @@
               </a> 
             </span>
           </div>
-          <button class="button-modal" type="submit">Відправити</button>
           </label>
-          
+          <div class="modal-submit"> 
+          <button class="button-modal" type="submit">Відправити</button>
+        </div> 
         </form>
       </div>
       </div>
