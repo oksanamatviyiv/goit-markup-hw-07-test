@@ -1,4 +1,24 @@
-@import './utils/utils';
-@import './components/components.scss';
+@import'./base/base';
+@import'./base/reset';
+@import'./base/common';
+
+@import'./layout/header';
+@import'./layout/hero';
+@import'./layout/about';
+@import'./layout/activity';
+@import'./layout/team';
+@import'./layout/clients';
+@import'./layout/footer';
+@import'./layout/portfolio';
+
+@import'./utils/container';
+@import'./utils/vh';
+@import'./utils/var';
+
+@import'./components/logo';
+@import'./components/btn';
+@import'./components/modal';
+
+
 
 
