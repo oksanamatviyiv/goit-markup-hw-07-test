@@ -485,7 +485,6 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
-  margin-bottom: 50px;
 }
 
 .card {
@@ -1039,13 +1038,19 @@ img {
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop.is-hidden .backdrop {
+.backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scaleY(0) rotate(-180deg);
           transform: translate(-50%, -50%) scaleY(0) rotate(-180deg);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .modal {
@@ -1065,69 +1070,14 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal-close {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  border-color: rgba(0, 0, 0, 0.1);
-  fill: #000000;
-  background-color: var(--primary-white-color);
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.close {
-  width: 11px;
-  height: 11px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto;
-}
-
-.item-close {
-  width: 100%;
-  height: 100%;
-}
-
-.modal-close:hover,
-.modal-close:focus {
-  fill: var(--accent-color);
-  background-color: var(--primary-white-color);
-}
-
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-
-.modal-title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   margin-bottom: 12px;
 }
-
-textarea {
-  resize: none;
-}
-
-.modal-input {
+.modal__input {
   overflow: hidden;
   width: 100%;
   height: 40px;
@@ -1143,62 +1093,99 @@ textarea {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-input:focus {
+.modal__input::-webkit-input-placeholder {
+  height: 96px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  padding: 16px 12px;
+}
+.modal__input::-moz-placeholder {
+  height: 96px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  padding: 16px 12px;
+}
+.modal__input:-ms-input-placeholder {
+  height: 96px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  padding: 16px 12px;
+}
+.modal__input::-ms-input-placeholder {
+  height: 96px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  padding: 16px 12px;
+}
+.modal__input::placeholder {
+  height: 96px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  padding: 16px 12px;
+}
+.modal__input:focus {
   border: 1px solid var(--accent-color);
 }
-
-.modal-input::-webkit-input-placeholder {
-  height: 96px;
-  width: 100%;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-  padding: 16px 12px;
-}
-
-.modal-input::-moz-placeholder {
-  height: 96px;
-  width: 100%;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-  padding: 16px 12px;
-}
-
-.modal-input:-ms-input-placeholder {
-  height: 96px;
-  width: 100%;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-  padding: 16px 12px;
-}
-
-.modal-input::-ms-input-placeholder {
-  height: 96px;
-  width: 100%;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-  padding: 16px 12px;
-}
-
-.modal-input::placeholder {
-  height: 96px;
-  width: 100%;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-  padding: 16px 12px;
-}
-
-.modal-input:focus + svg {
+.modal__input:focus + svg {
   fill: var(--accent-color);
+}
+
+.close {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  border-color: rgba(0, 0, 0, 0.1);
+  fill: #000000;
+  background-color: var(--primary-white-color);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close:hover, .close:focus {
+  fill: var(--accent-color);
+  background-color: var(--primary-white-color);
+}
+.close__round {
+  width: 11px;
+  height: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+.close__item {
+  width: 100%;
+  height: 100%;
+}
+
+textarea {
+  resize: none;
 }
 
 .icon-check {
@@ -1256,7 +1243,7 @@ label {
   padding-top: 0;
 }
 
-.input, textarea {
+input, textarea {
   overflow: hidden;
   font-family: inherit;
   font-size: inherit;

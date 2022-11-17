@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>Студія</title>
 </head>
 <body>
@@ -414,53 +414,52 @@
         </div>
       </div>
     </footer> 
-      <div data-modal class="backdrop is-hidden">
+    <div data-modal class="backdrop is-hidden">
       <div class="modal">
-        <button data-modal-close type="button" class="modal-close">
-          <svg class="close">
-          <use class="item-close" href="./images/icons.svg#icon-close-modal" width="11px" height="11px"></use>
+        <button data-modal-close type="button" class="close">
+          <svg class="close__round">
+          <use class="close__item" href="./images/icons.svg#icon-close-modal" width="11px" height="11px"></use>
           </svg>
         </button>
-        <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
-        <form class="modal-form">
+        <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal__form">
           <label>
             Ім'я
-            <input type="text" class="modal-input" name="user-name" placeholder=" " />
+            <input type="text" class="modal__input" name="user-name" placeholder=" " />
             <svg class="icon-user"> 
-              <use  class="icon-user-modal" href="./images/icons.svg#icon-user" width="18px" height="18px"></use>
+              <use href="./images/icons.svg#icon-user" width="18px" height="18px"></use>
             </svg>
           </label>
           <label>
             Телефон
-            <input type="tel" class="modal-input" name="user-tel" placeholder=" " />
+            <input type="tel" class="modal__input" name="user-tel" placeholder=" " />
             <svg class="icon-phone"> 
-              <use  class="icon-user-modal" href="./images/icons.svg#icon-phone-modal" width="18px" height="18px"></use>
+              <use href="./images/icons.svg#icon-phone-modal" width="18px" height="18px"></use>
             </svg>
-          </label>
           </label>
           <label>
             Пошта
-            <input type="email" class="modal-input" name="user-email" placeholder=" " />
+            <input type="email" class="modal__input" name="user-email" placeholder=" " />
             <svg class="icon-email"> 
-              <use  class="icon-user-modal" href="./images/icons.svg#icon-email-modal" width="18px" height="18px"></use>
+              <use href="./images/icons.svg#icon-email-modal" width="18px" height="18px"></use>
             </svg>
           </label>
           <label class="comment-title" for="comment">
             Коментар
           </label>
-            <textarea class="modal-comment modal-input" name="comment" id="comment" placeholder="Введіть текст" ></textarea>
-          <label class="modal-send" for="mail-send">
-            <div class="modal-check">
+            <textarea class="modal-comment modal__input" name="comment" id="comment" placeholder="Введіть текст" ></textarea>
+            <label class="modal-send" for="mail-send">
+            <span class="modal-check ">
             <input class="check-box" type="checkbox"  name="mail-send" id="mail-send" />
             <svg class="icon-check"> 
-              <use  class="icon-user-modal" href="./images/icons.svg#icon-check-mark" width="15px" height="14px"></use>
+              <use href="./images/icons.svg#icon-check-mark" width="15px" height="14px"></use>
             </svg>
             <span class="text-check" >Погоджуюся з розсилкою та приймаю
               <a href="" class="send-link">
               Умови договору
               </a> 
             </span>
-          </div>
+          </span>
           </label>
           <div class="modal-submit"> 
           <button class="button-modal" type="submit">Відправити</button>
