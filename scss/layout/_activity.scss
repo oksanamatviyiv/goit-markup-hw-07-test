@@ -1,57 +1,43 @@
 .activity {
     padding-top: 94px;
     padding-bottom: 94px;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
     }
-    
-    .section-title, .main-activity {
-      font-weight: 700;
-      font-size: 36px;
-      line-height: 1.2;
-      text-align: center;
+    &__item {
+        width: 370px;
     }
-    .section-title {
-      margin-bottom: 50px;
+    &__item:not(:nth-child(3n)) {
+        margin-right: 30px
     }
-    
-    .activity-items {
-      display: flex;
-      flex-wrap: wrap;
-    
+    &__item {
+        width: calc((100% - 60px) / 3);
     }
-    .activity-item {
-      width: 370px;
+    &__wrap {
+        position: relative;
+        height: 100%;
+        top: -70px;
+        left: 0;
+        overflow: visible;
     }
-    
-    .activity-item:not(:nth-child(3n)) {
-      margin-right: 30px
+    &-top-text {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-align: center;
+        text-transform: uppercase;
+        width: 370px;
+        height: 70px;
+        background: rgba(47, 48, 58, 0.8);
+        color: var(--primary-white-color);
+        padding-top: 27px;
+        padding-left: auto;
+        padding-right: auto;
     }
-    .activity-item {
-      width: calc((100% - 60px) / 3);
-    }
-    .activity-wrap {
-      position: relative;
-      height: 100%;
-      top: -70px;
-      left: 0;
-      overflow: visible;
-    }
-    
-    .activity-top-text {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 1.14;
-      text-align: center;
-      text-transform: uppercase;
-      width: 370px;
-      height: 70px;
-      background: rgba(47, 48, 58, 0.8);
-      color: var(--primary-white-color);
-      padding-top: 27px;
-      padding-left: auto;
-      padding-right: auto;
-    }
+}

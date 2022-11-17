@@ -58,6 +58,7 @@
   .footer-soc {
     display: block;
     margin-left: 70px;
+    gap: 10px;
   }
   
   .title-soc {
@@ -72,19 +73,7 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  
-  .social-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    margin-right: 10px;
-  }
-  
-  .social-list:nth-child(4n) {
-    margin-right: 0;
-  }
+
   .footer-link-wrap {
     margin-left: auto;
   }
